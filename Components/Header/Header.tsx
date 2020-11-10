@@ -2,7 +2,7 @@ import React from 'react'
 import {View, Text, TouchableOpacity} from 'react-native'
 import styles from './HeaderStyles'
 import { AntDesign, Ionicons} from '@expo/vector-icons';
-const Header = ({setAlbumAssets, albumAssets, setImage}) => {
+const Header = ({setAlbumAssets, albumAssets, setImage,  albumName}) => {
     const choseImage =()=>{
         setAlbumAssets(null)
         setImage(null)
@@ -15,9 +15,11 @@ const Header = ({setAlbumAssets, albumAssets, setImage}) => {
             }
             </TouchableOpacity>
             <Text style={styles.header__text}>
-                Crisp Albums
+                {
+                     albumName? albumName :  "Crisp Albums"
+                }
             </Text>
-            <TouchableOpacity style={styles.header__share} onPress={openAndShare}>
+            <TouchableOpacity style={styles.header__share}>
             <AntDesign name="setting" size={24} color="orange" />
             </TouchableOpacity>
         </View>

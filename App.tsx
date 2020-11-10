@@ -19,7 +19,7 @@ export default function App() {
   }, []);
   return (
     <View style={styles.container}>
-        <Header setAlbumAssets={setAlbumAssets} albumAssets={albumAssets} setImage={setImage}/>
+        <Header setAlbumAssets={setAlbumAssets} albumAssets={albumAssets} setImage={setImage} albumName={albumName}/>
         <Main setAlbumAssets={setAlbumAssets} setImage={setImage} image={image} albumName={albumName} setAlbumName={setAlbumName} albumAssets={albumAssets}/>
     </View>
   );
